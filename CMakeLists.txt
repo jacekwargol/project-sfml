@@ -3,7 +3,7 @@ project(ProjectSFML)
 
 set(CMAKE_CXX_STANDARD 17)
 
-set(SOURCE_FILES main.cpp)
+set(SOURCE_FILES src/states/GameState.cpp src/states/GameState.h src/Game.cpp src/Game.h src/main.cpp)
 add_executable(ProjectSFML ${SOURCE_FILES})
 
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/cmake_modules")
