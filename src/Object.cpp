@@ -1,4 +1,5 @@
 #include "Object.h"
+#include "Level.h"
 
 Object::Object(TileType type, const sf::Color &color, const sf::Vector2f &position) :
         tile{type, color, true, position} {}
@@ -12,35 +13,38 @@ void Object::draw(Window &window) {
     tile.draw(window);
 }
 
-void Object::move(MOVE_DIR direction) {
-    sf::Vector2f newPos{};
+bool Object::move(MOVE_DIR direction) {
+    sf::Vector2f newPos = getNewPos(direction);
+    auto collidingObject = Level::getInstance().getCollidingObject(newPos);
+    if(collidingObject) {
+        if(collidingObject->move(direction)) {
+            tile.setPosition(newPos);
+            return true;
+        }
+        else{
+            return false;
+        }
+    }
+    if(!Level::getInstance().isCollisionWithTile(newPos)) {
+        tile.setPosition(newPos);
+        return true;
+    }
+}
+
+sf::Vector2f Object::getNewPos(MOVE_DIR direction) {
     switch (direction) {
         case UP:
-            newPos = {tile.getPosition().x,
-                tile.getPosition().y - TILE_SIZE};
-            break;
+            return  {tile.getPosition().x,
+                      tile.getPosition().y - TILE_SIZE};
         case DOWN:
-            newPos = {tile.getPosition().x,
-                tile.getPosition().y + TILE_SIZE};
-            break;
+            return  {tile.getPosition().x,
+                      tile.getPosition().y + TILE_SIZE};
         case LEFT:
-            newPos = {tile.getPosition().x - TILE_SIZE,
-                tile.getPosition().y};
-            break;
+            return  {tile.getPosition().x - TILE_SIZE,
+                      tile.getPosition().y};
         case RIGHT:
-            newPos = {tile.getPosition().x + TILE_SIZE,
-                tile.getPosition().y};
-            break;
-
-        default:
-            break;
-        }
-
-    tile.setPosition(newPos);
+            return  {tile.getPosition().x + TILE_SIZE,
+                      tile.getPosition().y};
+    }
 }
-
-bool Object::isCollision(const sf::Vector2f pos) {
-    return false;
-}
-
 

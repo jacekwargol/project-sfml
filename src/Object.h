@@ -12,15 +12,14 @@ public:
     explicit Object(const Tile& tile);
     ~Object();
 
-    void move(MOVE_DIR direction);
+    bool move(MOVE_DIR direction);
 
     Tile getTile() const { return tile; }
     sf::Vector2f getPosition() const { return tile.getPosition(); }
     void draw(Window& window);
 private:
     Tile tile;
-
-    bool isCollision(const sf::Vector2f pos);
+    sf::Vector2f getNewPos(MOVE_DIR direction);
 };
 
 

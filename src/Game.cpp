@@ -14,13 +14,12 @@ Game::~Game() = default;
 
 void Game::gameLoop() {
     sf::Clock clock;
-    Level level{};
-    level.load("level1.txt");
+    Level::getInstance().load("level1.txt");
     while (window.isOpen()) {
         auto elapsed = clock.restart();
         auto dt = elapsed.asSeconds();
-        window.clear(sf::Color::Green);
-        level.draw(window);
+        window.clear(sf::Color::Black);
+        Level::getInstance().draw(window);
         player.draw(window);
         window.display();
         handleInput();

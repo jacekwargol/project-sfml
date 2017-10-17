@@ -2,23 +2,28 @@
 #define PROJECTSFML_LEVEL_H
 
 
+#include <memory>
 #include "Tile.h"
 #include "Window.h"
 #include "Object.h"
 
 class Level {
 public:
+    static Level& getInstance();
+    static void draw(Window& window);
+    static void load(const std::string& filename);
+    static void save(const std::string& filename);
+
+    bool isCollisionWithTile(const sf::Vector2f &pos);
+    std::shared_ptr<Object> getCollidingObject(const sf::Vector2f &pos);
+
+private:
     Level();
     ~Level();
 
-    void draw(Window& window);
-    void load(const std::string& filename);
-    void save(const std::string& filename);
+    static std::vector<Tile> map;
+    static std::vector<std::shared_ptr<Object>> objects;
 
-    bool isCollision(const Object& object);
-private:
-    std::vector<Tile> map;
-    int numTiles;
 };
 
 
