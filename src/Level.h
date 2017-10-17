@@ -5,7 +5,7 @@
 #include <memory>
 #include "Tile.h"
 #include "Window.h"
-#include "Object.h"
+#include "Block.h"
 
 class Level {
 public:
@@ -14,16 +14,17 @@ public:
     static void load(const std::string& filename);
     static void save(const std::string& filename);
 
-    bool isCollisionWithTile(const sf::Vector2f &pos);
-    std::shared_ptr<Object> getCollidingObject(const sf::Vector2f &pos);
+    static bool isCollisionWithTile(const sf::Vector2f &pos);
+    static std::shared_ptr<Block> getCollidingObject(const sf::Vector2f &pos);
+    static bool isBlockAtCorrectPlate(const Block& block);
 
 private:
     Level();
     ~Level();
 
     static std::vector<Tile> map;
-    static std::vector<std::shared_ptr<Object>> objects;
-
+    static std::vector<std::shared_ptr<Block>> objects;
+    static std::vector<Tile> plates;
 };
 
 

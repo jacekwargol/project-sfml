@@ -4,9 +4,8 @@
 
 #include <memory>
 #include "Window.h"
-#include "Object.h"
+#include "Block.h"
 
-class IState;
 
 class Game {
 public:
@@ -19,7 +18,7 @@ public:
 
 private:
     Window window;
-    Object player;
+    Block player;
 
     void handleInput();
 };

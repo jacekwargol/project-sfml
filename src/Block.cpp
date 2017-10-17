@@ -1,24 +1,26 @@
-#include "Object.h"
+#include <iostream>
+#include "Block.h"
 #include "Level.h"
 
-Object::Object(TileType type, const sf::Color &color, const sf::Vector2f &position) :
+Block::Block(TileType type, const sf::Color &color, const sf::Vector2f &position) :
         tile{type, color, true, position} {}
 
-Object::Object(const Tile &tile) : tile{tile} {}
-
-Object::~Object() = default;
+Block::~Block() = default;
 
 
-void Object::draw(Window &window) {
+void Block::draw(Window &window) {
     tile.draw(window);
 }
 
-bool Object::move(MOVE_DIR direction) {
+bool Block::move(MOVE_DIR direction) {
     sf::Vector2f newPos = getNewPos(direction);
     auto collidingObject = Level::getInstance().getCollidingObject(newPos);
     if(collidingObject) {
         if(collidingObject->move(direction)) {
             tile.setPosition(newPos);
+            if(Level::getInstance().isBlockAtCorrectPlate(*collidingObject)) {
+                std::cout << "plate at correct positon" << std::endl;
+            }
             return true;
         }
         else{
@@ -31,7 +33,7 @@ bool Object::move(MOVE_DIR direction) {
     }
 }
 
-sf::Vector2f Object::getNewPos(MOVE_DIR direction) {
+sf::Vector2f Block::getNewPos(MOVE_DIR direction) {
     switch (direction) {
         case UP:
             return  {tile.getPosition().x,

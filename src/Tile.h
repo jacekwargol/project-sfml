@@ -6,7 +6,7 @@
 #include <SFML/Graphics/RectangleShape.hpp>
 #include "Window.h"
 
-enum TileType {FLOOR, WALL, PLAYER, BLOCK, };
+enum TileType {FLOOR, WALL, PLATE, PLAYER, BLOCK, };
 const int TILE_SIZE = 75;
 
 class Tile {

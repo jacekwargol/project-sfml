@@ -6,17 +6,17 @@
 
 enum MOVE_DIR {UP, DOWN, LEFT, RIGHT};
 
-class Object {
+class Block {
 public:
-    Object(TileType type, const sf::Color& color, const sf::Vector2f& position);
-    explicit Object(const Tile& tile);
-    ~Object();
+    explicit Block(TileType type, const sf::Color& color, const sf::Vector2f& position);
+    ~Block();
 
     bool move(MOVE_DIR direction);
 
-    Tile getTile() const { return tile; }
     sf::Vector2f getPosition() const { return tile.getPosition(); }
+    sf::Color getColor() const { return tile.getColor(); }
     void draw(Window& window);
+
 private:
     Tile tile;
     sf::Vector2f getNewPos(MOVE_DIR direction);
