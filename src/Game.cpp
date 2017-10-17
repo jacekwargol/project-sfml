@@ -2,49 +2,56 @@
 // Created by ricen on 10/10/17.
 //
 
+#include <iostream>
+#include <SFML/Window/Event.hpp>
 #include "Game.h"
-#include "states/GameState.h"
+#include "Level.h"
 
-Game::Game(sf::Vector2i windowSize) : windowSize {windowSize}{
-    window.create(sf::VideoMode(windowSize.x, windowSize.y), "Flow");
-    window.setFramerateLimit(60);
-}
+Game::Game() : window{}, player{TileType::PLAYER, sf::Color::Blue, {75, 75}} {}
 
-Game::~Game() {
-    while(!states.empty()) popState();
-}
+Game::~Game() = default;
 
-void Game::pushState(std::shared_ptr<GameState> state) {
-    states.push(state);
-}
-
-
-void Game::popState() {
-    states.pop();
-}
-
-void Game::changeState(std::shared_ptr<GameState> state) {
-    if(!states.empty()) popState();
-    pushState(state);
-}
-
-std::shared_ptr<GameState> Game::peekState() {
-    return (states.empty() ? nullptr : states.top());
-}
 
 void Game::gameLoop() {
     sf::Clock clock;
-
+    Level level{};
+    level.load("level1.txt");
     while (window.isOpen()) {
         auto elapsed = clock.restart();
         auto dt = elapsed.asSeconds();
-
-        if(peekState() == nullptr) continue;
-
-        peekState()->handleInput();
-        peekState()->update(dt);
-        window.clear(sf::Color::Black);
-        peekState()->draw(dt);
+        window.clear(sf::Color::Green);
+        level.draw(window);
+        player.draw(window);
         window.display();
+        handleInput();
+    }
+}
+
+void Game::handleInput() {
+    sf::Event event{};
+    while(window.pollEvent(event)) {
+        switch(event.type) {
+            case sf::Event::KeyPressed:
+                if(event.key.code == sf::Keyboard::Escape) {
+                    window.close();
+                }
+
+                else if(event.key.code == sf::Keyboard::W) {
+                    player.move(MOVE_DIR::UP);
+                }
+                else if(event.key.code == sf::Keyboard::S) {
+                    player.move(MOVE_DIR::DOWN);
+                }
+                else if(event.key.code == sf::Keyboard::A) {
+                    player.move(MOVE_DIR::LEFT);
+                }
+                else if(event.key.code == sf::Keyboard::D) {
+                    player.move(MOVE_DIR::RIGHT);
+                }
+                break;
+
+            default:
+                break;
+        }
     }
 }

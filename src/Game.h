@@ -2,29 +2,26 @@
 #define PROJECTSFML_GAME_H
 
 
-#include <stack>
-#include <SFML/Graphics/RenderWindow.hpp>
 #include <memory>
+#include "Window.h"
+#include "Object.h"
 
-class GameState;
+class IState;
 
 class Game {
 public:
-    explicit Game(sf::Vector2i windowSize = {800, 600});
+    explicit Game();
     ~Game();
 
-    std::stack<std::shared_ptr<GameState>> states;
-    sf::RenderWindow window;
-
-    void pushState(std::shared_ptr<GameState> state);
-    void popState();
-    void changeState(std::shared_ptr<GameState> state);
-    std::shared_ptr<GameState> peekState();
+    Window& getWindow() { return window; }
 
     void gameLoop();
 
 private:
-    sf::Vector2u windowSize;
+    Window window;
+    Object player;
+
+    void handleInput();
 };
 
 
