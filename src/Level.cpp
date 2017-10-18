@@ -9,12 +9,7 @@ Level &Level::getInstance() {
 }
 
 
-Level::Level() : map{}, blocks{}, plates{} {
-    blocks.emplace_back(std::make_shared<Block>(
-            Block{TileType::Block, sf::Color::Green, {150, 75}}
-    ));
-    plates.emplace_back(Tile{TileType::Plate, sf::Color::Green, true, {300, 75}});
-}
+Level::Level() : map{}, blocks{}, plates{}, player{} {}
 
 Level::~Level() = default;
 
@@ -25,9 +20,10 @@ void Level::draw(Window &window) {
     for (auto &plate : plates) {
         plate.draw(window);
     }
-    for (auto &obj : blocks) {
-        obj->draw(window);
+    for (auto &block : blocks) {
+        block->draw(window);
     }
+    player->draw(window);
 }
 
 void Level::load(const std::string &filename) {
@@ -47,7 +43,20 @@ void Level::load(const std::string &filename) {
         };
         auto isBlocking = static_cast<bool>(std::stoi(isBlockingStr));
         sf::Vector2f pos{std::stof(posxStr) * TILE_SIZE, std::stof(posyStr) * TILE_SIZE};
-        map.emplace_back(Tile{type, color, isBlocking, pos});
+
+        Tile tile{type, color, isBlocking, pos};
+        if(type == TileType::Plate) {
+            plates.emplace_back(tile);
+        }
+        else if(type == TileType::Block) {
+            blocks.emplace_back(std::make_shared<Block>(Block{type, color, pos}));
+        }
+        else if(type == TileType::Player) {
+            player = std::make_shared<Block>(Block{type, color, pos});
+        }
+        else {
+            map.emplace_back(Tile{type, color, isBlocking, pos});
+        }
     }
 
 }

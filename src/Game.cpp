@@ -7,13 +7,14 @@
 #include "Game.h"
 #include "Level.h"
 
-Game::Game() : window{}, player{TileType::Player, sf::Color::Blue, {75, 75}} {}
+Game::Game() : window{}, player{} {}
 
 Game::~Game() = default;
 
 
 void Game::gameLoop() {
     Level::getInstance().load("level1.txt");
+    player = Level::getInstance().getPlayer();
     while (window.isOpen()) {
         handleDrawing();
         handleInput();
@@ -21,6 +22,7 @@ void Game::gameLoop() {
 }
 
 void Game::handleInput() {
+    auto player = Level::getInstance().getPlayer();
     sf::Event event{};
     while (window.pollEvent(event)) {
         switch (event.type) {
@@ -28,13 +30,13 @@ void Game::handleInput() {
                 if (event.key.code == sf::Keyboard::Escape) {
                     window.close();
                 } else if (event.key.code == sf::Keyboard::W) {
-                    handleMovement(player, MoveDir::Up);
+                    handleMovement(*player, MoveDir::Up);
                 } else if (event.key.code == sf::Keyboard::S) {
-                    handleMovement(player, MoveDir::Down);
+                    handleMovement(*player, MoveDir::Down);
                 } else if (event.key.code == sf::Keyboard::A) {
-                    handleMovement(player, MoveDir::Left);
+                    handleMovement(*player, MoveDir::Left);
                 } else if (event.key.code == sf::Keyboard::D) {
-                    handleMovement(player, MoveDir::Right);
+                    handleMovement(*player, MoveDir::Right);
                 }
                 break;
 
@@ -47,7 +49,6 @@ void Game::handleInput() {
 void Game::handleDrawing() {
     window.clear(sf::Color::Black);
     Level::getInstance().draw(window);
-    player.draw(window);
     window.display();
 }
 

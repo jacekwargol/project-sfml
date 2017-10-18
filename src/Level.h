@@ -21,6 +21,8 @@ public:
     bool isBlockAtCorrectPlate(const Block& block);
     bool isWin();
 
+    std::shared_ptr<Block> getPlayer() { return player; }
+
 private:
     Level();
     ~Level();
@@ -28,6 +30,7 @@ private:
     std::vector<Tile> map;
     std::vector<std::shared_ptr<Block>> blocks;
     std::vector<Tile> plates;
+    std::shared_ptr<Block> player;
 };
 
 

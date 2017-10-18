@@ -16,7 +16,7 @@ public:
 
 private:
     Window window;
-    Block player;
+    std::shared_ptr<Block> player;
 
     void handleInput();
     void handleDrawing();

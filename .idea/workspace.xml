@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="BookmarkManager">
-    <bookmark url="file://$PROJECT_DIR$/src/Level.cpp" line="83" />
+    <bookmark url="file://$PROJECT_DIR$/src/Level.cpp" line="92" />
   </component>
   <component name="CMakeRunConfigurationManager" shouldGenerate="true" shouldDeleteObsolete="true" buildAllGenerated="true">
     <generated>
@@ -14,20 +14,17 @@
     </configurations>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="e2c90285-01f6-43e5-82b7-ec6c89d74fa1" name="Default" comment="Move collision check to Game, Add win check">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProjectSFML.dir/src/Game.cpp.o" afterPath="" />
+    <list default="true" id="e2c90285-01f6-43e5-82b7-ec6c89d74fa1" name="Default" comment="Im">
       <change type="DELETED" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProjectSFML.dir/src/Level.cpp.o" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProjectSFML.dir/src/Block.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProjectSFML.dir/src/Block.cpp.o" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProjectSFML.dir/src/main.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProjectSFML.dir/src/main.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProjectSFML.dir/src/Game.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProjectSFML.dir/src/Game.cpp.o" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProjectSFML.dir/src/Tile.cpp.o" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/ProjectSFML.dir/src/Tile.cpp.o" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/ProjectSFML" afterPath="$PROJECT_DIR$/cmake-build-debug/ProjectSFML" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Block.cpp" afterPath="$PROJECT_DIR$/src/Block.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Block.h" afterPath="$PROJECT_DIR$/src/Block.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/cmake-build-debug/level1.txt" afterPath="$PROJECT_DIR$/cmake-build-debug/level1.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game.cpp" afterPath="$PROJECT_DIR$/src/Game.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game.h" afterPath="$PROJECT_DIR$/src/Game.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Level.cpp" afterPath="$PROJECT_DIR$/src/Level.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Level.h" afterPath="$PROJECT_DIR$/src/Level.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Tile.h" afterPath="$PROJECT_DIR$/src/Tile.h" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -45,8 +42,8 @@
           <file leaf-file-name="Game.cpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Game.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="446">
-                  <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
+                <state relative-caret-position="529">
+                  <caret line="38" column="36" lean-forward="false" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
                   <folding>
                     <element signature="e#40#59#0" expanded="true" />
                   </folding>
@@ -57,18 +54,18 @@
           <file leaf-file-name="Game.h" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Game.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="330">
-                  <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+                <state relative-caret-position="240">
+                  <caret line="18" column="26" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Level.cpp" pinned="false" current-in-tab="false">
+          <file leaf-file-name="Level.cpp" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Level.cpp">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="180">
-                  <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+                <state relative-caret-position="-558">
+                  <caret line="11" column="54" lean-forward="false" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
                   <folding>
                     <element signature="e#0#19#0" expanded="true" />
                   </folding>
@@ -76,14 +73,34 @@
               </provider>
             </entry>
           </file>
+          <file leaf-file-name="new_allocator.h" pinned="false" current-in-tab="false">
+            <entry file="file:///usr/include/c++/5/ext/new_allocator.h">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="295">
+                  <caret line="119" column="6" lean-forward="false" selection-start-line="119" selection-start-column="6" selection-end-line="119" selection-end-column="6" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
           <file leaf-file-name="Level.h" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Level.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="315">
-                  <caret line="21" column="17" lean-forward="false" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+                <state relative-caret-position="345">
+                  <caret line="23" column="26" lean-forward="true" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
                   <folding>
                     <element signature="e#58#75#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="level1.txt" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/cmake-build-debug/level1.txt">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="300">
+                  <caret line="20" column="19" lean-forward="false" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -120,18 +137,6 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Tile.h" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/Tile.h">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="120">
-                  <caret line="8" column="21" lean-forward="false" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-                  <folding>
-                    <element signature="e#55#91#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
         </leaf>
       </split-first>
       <split-second>
@@ -140,7 +145,7 @@
             <entry file="file://$PROJECT_DIR$/src/Game.cpp">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="334">
-                  <caret line="32" column="56" lean-forward="false" selection-start-line="32" selection-start-column="56" selection-end-line="32" selection-end-column="56" />
+                  <caret line="34" column="57" lean-forward="false" selection-start-line="34" selection-start-column="57" selection-end-line="34" selection-end-column="57" />
                   <folding>
                     <element signature="e#40#59#0" expanded="true" />
                   </folding>
@@ -151,20 +156,32 @@
           <file leaf-file-name="Block.h" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Block.h">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="315">
-                  <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+                <state relative-caret-position="300">
+                  <caret line="20" column="8" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="Block.cpp" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Block.cpp" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Block.cpp">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="225">
                   <caret line="15" column="4" lean-forward="false" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="4" />
                   <folding>
                     <element signature="e#0#19#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="Tile.h" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/Tile.h">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="465">
+                  <caret line="31" column="2" lean-forward="true" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
+                  <folding>
+                    <element signature="e#55#91#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
@@ -207,17 +224,17 @@
         <option value="$PROJECT_DIR$/src/Window.cpp" />
         <option value="$PROJECT_DIR$/src/Player.cpp" />
         <option value="$PROJECT_DIR$/src/Player.h" />
-        <option value="$PROJECT_DIR$/cmake-build-debug/level1.txt" />
         <option value="$PROJECT_DIR$/src/Object.h" />
         <option value="$PROJECT_DIR$/src/Object.cpp" />
         <option value="$PROJECT_DIR$/src/Window.h" />
         <option value="$PROJECT_DIR$/src/Block.h" />
-        <option value="$PROJECT_DIR$/src/Level.h" />
         <option value="$PROJECT_DIR$/src/Tile.h" />
         <option value="$PROJECT_DIR$/src/Block.cpp" />
-        <option value="$PROJECT_DIR$/src/Level.cpp" />
+        <option value="$PROJECT_DIR$/cmake-build-debug/level1.txt" />
+        <option value="$PROJECT_DIR$/src/Level.h" />
         <option value="$PROJECT_DIR$/src/Game.h" />
         <option value="$PROJECT_DIR$/src/Game.cpp" />
+        <option value="$PROJECT_DIR$/src/Level.cpp" />
       </list>
     </option>
   </component>
@@ -272,6 +289,11 @@
             <path>
               <item name="ProjectSFML" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
               <item name="ProjectSFML" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ProjectSFML" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
+              <item name="ProjectSFML" type="462c0819:PsiDirectoryNode" />
+              <item name="cmake-build-debug" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="ProjectSFML" type="dad4c3:CidrFilesViewHelper$MyProjectTreeStructure$1" />
@@ -384,22 +406,29 @@
       <option name="project" value="LOCAL" />
       <updated>1508350448661</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Move collision check to Game, Add win check">
+      <created>1508356720488</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1508356720488</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="115409000" />
+    <option name="totallyTimeSpent" value="118709000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1922" height="1053" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32563025" sideWeight="0.48383734" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32563025" sideWeight="0.48383734" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32948583" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32247898" sideWeight="0.5161627" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983193" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32247898" sideWeight="0.48383734" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32247898" sideWeight="0.48383734" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1203125" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32983193" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -455,7 +484,7 @@
           <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="32" />
+      <option name="time" value="35" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -528,13 +557,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/cmake-build-debug/leve1.txt" />
-    <entry file="file://$PROJECT_DIR$/cmake-build-debug/level1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="23" lean-forward="false" selection-start-line="17" selection-start-column="23" selection-end-line="17" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/include/c++/5/bits/shared_ptr_base.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
@@ -542,17 +564,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/include/c++/5/ext/new_allocator.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="205">
-          <caret line="119" column="6" lean-forward="false" selection-start-line="119" selection-start-column="6" selection-end-line="119" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/include/c++/5/bits/shared_ptr.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
           <caret line="106" column="6" lean-forward="false" selection-start-line="106" selection-start-column="6" selection-end-line="106" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -624,16 +640,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/TextManager.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="30" lean-forward="false" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
-          <folding>
-            <element signature="e#0#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/TextManager.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -642,18 +648,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tile.cpp">
+    <entry file="file:///usr/include/c++/5/ext/new_allocator.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="89" lean-forward="false" selection-start-line="4" selection-start-column="89" selection-end-line="4" selection-end-column="89" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Block.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="14" lean-forward="true" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
+        <state relative-caret-position="295">
+          <caret line="119" column="6" lean-forward="false" selection-start-line="119" selection-start-column="6" selection-end-line="119" selection-end-column="6" />
           <folding />
         </state>
       </provider>
@@ -668,10 +666,72 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/TextManager.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="30" lean-forward="false" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="30" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Block.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="8" lean-forward="true" selection-start-line="20" selection-start-column="8" selection-end-line="20" selection-end-column="8" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tile.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="89" lean-forward="false" selection-start-line="4" selection-start-column="89" selection-end-line="4" selection-end-column="89" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Tile.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="2" lean-forward="true" selection-start-line="31" selection-start-column="2" selection-end-line="31" selection-end-column="2" />
+          <folding>
+            <element signature="e#55#91#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Game.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="18" column="26" lean-forward="false" selection-start-line="18" selection-start-column="26" selection-end-line="18" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Game.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="529">
+          <caret line="38" column="36" lean-forward="false" selection-start-line="38" selection-start-column="36" selection-end-line="38" selection-end-column="36" />
+          <folding>
+            <element signature="e#40#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/cmake-build-debug/level1.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="19" lean-forward="false" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Level.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="17" lean-forward="false" selection-start-line="21" selection-start-column="17" selection-end-line="21" selection-end-column="17" />
+        <state relative-caret-position="345">
+          <caret line="23" column="26" lean-forward="true" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="26" />
           <folding>
             <element signature="e#58#75#0" expanded="true" />
           </folding>
@@ -680,38 +740,10 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Level.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="-558">
+          <caret line="11" column="54" lean-forward="false" selection-start-line="11" selection-start-column="54" selection-end-line="11" selection-end-column="54" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Game.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Game.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="446">
-          <caret line="53" column="0" lean-forward="true" selection-start-line="53" selection-start-column="0" selection-end-line="53" selection-end-column="0" />
-          <folding>
-            <element signature="e#40#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Tile.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="21" lean-forward="false" selection-start-line="8" selection-start-column="21" selection-end-line="8" selection-end-column="21" />
-          <folding>
-            <element signature="e#55#91#0" expanded="true" />
           </folding>
         </state>
       </provider>
