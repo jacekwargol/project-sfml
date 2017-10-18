@@ -12,8 +12,6 @@ public:
     explicit Game();
     ~Game();
 
-    Window& getWindow() { return window; }
-
     void gameLoop();
 
 private:
@@ -21,6 +19,7 @@ private:
     Block player;
 
     void handleInput();
+    void draw();
 };
 
 

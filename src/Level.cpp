@@ -3,18 +3,13 @@
 #include "Level.h"
 
 
-std::vector<Tile> Level::map{};
-std::vector<std::shared_ptr<Block>> Level::objects{};
-std::vector<Tile> Level::plates{};
-
-
 Level &Level::getInstance() {
     static Level instance;
     return instance;
 }
 
 
-Level::Level() {
+Level::Level() : map{}, objects{}, plates{} {
     objects.emplace_back(std::make_shared<Block>(
             Block{TileType::BLOCK, sf::Color::Green, {150, 75}}
     ));

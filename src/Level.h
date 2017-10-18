@@ -10,21 +10,23 @@
 class Level {
 public:
     static Level& getInstance();
-    static void draw(Window& window);
-    static void load(const std::string& filename);
-    static void save(const std::string& filename);
 
-    static bool isCollisionWithTile(const sf::Vector2f &pos);
-    static std::shared_ptr<Block> getCollidingObject(const sf::Vector2f &pos);
-    static bool isBlockAtCorrectPlate(const Block& block);
+    void draw(Window& window);
+
+    void load(const std::string& filename);
+    void save(const std::string& filename);
+
+    bool isCollisionWithTile(const sf::Vector2f &pos);
+    std::shared_ptr<Block> getCollidingObject(const sf::Vector2f &pos);
+    bool isBlockAtCorrectPlate(const Block& block);
 
 private:
     Level();
     ~Level();
 
-    static std::vector<Tile> map;
-    static std::vector<std::shared_ptr<Block>> objects;
-    static std::vector<Tile> plates;
+    std::vector<Tile> map;
+    std::vector<std::shared_ptr<Block>> objects;
+    std::vector<Tile> plates;
 };
 
 
