@@ -36,16 +36,16 @@ void Game::handleInput() {
                 }
 
                 else if(event.key.code == sf::Keyboard::W) {
-                    player.move(MOVE_DIR::UP);
+                    player.move(MoveDir::Up);
                 }
                 else if(event.key.code == sf::Keyboard::S) {
-                    player.move(MOVE_DIR::DOWN);
+                    player.move(MoveDir::Down);
                 }
                 else if(event.key.code == sf::Keyboard::A) {
-                    player.move(MOVE_DIR::LEFT);
+                    player.move(MoveDir::Left);
                 }
                 else if(event.key.code == sf::Keyboard::D) {
-                    player.move(MOVE_DIR::RIGHT);
+                    player.move(MoveDir::Right);
                 }
                 break;
 

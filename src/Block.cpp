@@ -12,7 +12,7 @@ void Block::draw(Window &window) {
     tile.draw(window);
 }
 
-bool Block::move(MOVE_DIR direction) {
+bool Block::move(MoveDir direction) {
     sf::Vector2f newPos = getNewPos(direction);
     auto collidingObject = Level::getInstance().getCollidingObject(newPos);
     if(collidingObject) {
@@ -33,18 +33,18 @@ bool Block::move(MOVE_DIR direction) {
     }
 }
 
-sf::Vector2f Block::getNewPos(MOVE_DIR direction) {
+sf::Vector2f Block::getNewPos(MoveDir direction) {
     switch (direction) {
-        case UP:
+        case MoveDir::Up:
             return  {tile.getPosition().x,
                       tile.getPosition().y - TILE_SIZE};
-        case DOWN:
+        case MoveDir::Down:
             return  {tile.getPosition().x,
                       tile.getPosition().y + TILE_SIZE};
-        case LEFT:
+        case MoveDir::Left:
             return  {tile.getPosition().x - TILE_SIZE,
                       tile.getPosition().y};
-        case RIGHT:
+        case MoveDir::Right:
             return  {tile.getPosition().x + TILE_SIZE,
                       tile.getPosition().y};
     }
