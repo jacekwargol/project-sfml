@@ -204,6 +204,33 @@ src/Level.cpp.s:
 	$(MAKE) -f CMakeFiles/ProjectSFML.dir/build.make CMakeFiles/ProjectSFML.dir/src/Level.cpp.s
 .PHONY : src/Level.cpp.s
 
+src/MainMenuState.o: src/MainMenuState.cpp.o
+
+.PHONY : src/MainMenuState.o
+
+# target to build an object file
+src/MainMenuState.cpp.o:
+	$(MAKE) -f CMakeFiles/ProjectSFML.dir/build.make CMakeFiles/ProjectSFML.dir/src/MainMenuState.cpp.o
+.PHONY : src/MainMenuState.cpp.o
+
+src/MainMenuState.i: src/MainMenuState.cpp.i
+
+.PHONY : src/MainMenuState.i
+
+# target to preprocess a source file
+src/MainMenuState.cpp.i:
+	$(MAKE) -f CMakeFiles/ProjectSFML.dir/build.make CMakeFiles/ProjectSFML.dir/src/MainMenuState.cpp.i
+.PHONY : src/MainMenuState.cpp.i
+
+src/MainMenuState.s: src/MainMenuState.cpp.s
+
+.PHONY : src/MainMenuState.s
+
+# target to generate assembly for a file
+src/MainMenuState.cpp.s:
+	$(MAKE) -f CMakeFiles/ProjectSFML.dir/build.make CMakeFiles/ProjectSFML.dir/src/MainMenuState.cpp.s
+.PHONY : src/MainMenuState.cpp.s
+
 src/PlayState.o: src/PlayState.cpp.o
 
 .PHONY : src/PlayState.o
@@ -357,6 +384,9 @@ help:
 	@echo "... src/Level.o"
 	@echo "... src/Level.i"
 	@echo "... src/Level.s"
+	@echo "... src/MainMenuState.o"
+	@echo "... src/MainMenuState.i"
+	@echo "... src/MainMenuState.s"
 	@echo "... src/PlayState.o"
 	@echo "... src/PlayState.i"
 	@echo "... src/PlayState.s"

@@ -21,6 +21,16 @@ CMakeFiles/ProjectSFML.dir/src/Level.cpp.o: ../src/Level.h
 CMakeFiles/ProjectSFML.dir/src/Level.cpp.o: ../src/Tile.h
 CMakeFiles/ProjectSFML.dir/src/Level.cpp.o: ../src/Window.h
 
+CMakeFiles/ProjectSFML.dir/src/MainMenuState.cpp.o: ../src/Block.h
+CMakeFiles/ProjectSFML.dir/src/MainMenuState.cpp.o: ../src/Game.h
+CMakeFiles/ProjectSFML.dir/src/MainMenuState.cpp.o: ../src/IState.h
+CMakeFiles/ProjectSFML.dir/src/MainMenuState.cpp.o: ../src/MainMenuState.cpp
+CMakeFiles/ProjectSFML.dir/src/MainMenuState.cpp.o: ../src/MainMenuState.h
+CMakeFiles/ProjectSFML.dir/src/MainMenuState.cpp.o: ../src/PlayState.h
+CMakeFiles/ProjectSFML.dir/src/MainMenuState.cpp.o: ../src/TextManager.h
+CMakeFiles/ProjectSFML.dir/src/MainMenuState.cpp.o: ../src/Tile.h
+CMakeFiles/ProjectSFML.dir/src/MainMenuState.cpp.o: ../src/Window.h
+
 CMakeFiles/ProjectSFML.dir/src/PlayState.cpp.o: ../src/Block.h
 CMakeFiles/ProjectSFML.dir/src/PlayState.cpp.o: ../src/Game.h
 CMakeFiles/ProjectSFML.dir/src/PlayState.cpp.o: ../src/IState.h
@@ -43,6 +53,7 @@ CMakeFiles/ProjectSFML.dir/src/Window.cpp.o: ../src/Window.h
 CMakeFiles/ProjectSFML.dir/src/main.cpp.o: ../src/Block.h
 CMakeFiles/ProjectSFML.dir/src/main.cpp.o: ../src/Game.h
 CMakeFiles/ProjectSFML.dir/src/main.cpp.o: ../src/IState.h
+CMakeFiles/ProjectSFML.dir/src/main.cpp.o: ../src/MainMenuState.h
 CMakeFiles/ProjectSFML.dir/src/main.cpp.o: ../src/PlayState.h
 CMakeFiles/ProjectSFML.dir/src/main.cpp.o: ../src/Tile.h
 CMakeFiles/ProjectSFML.dir/src/main.cpp.o: ../src/Window.h

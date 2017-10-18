@@ -28,7 +28,7 @@ void Game::handleInput() {
 
 void Game::handleDrawing() {
     window.clear(sf::Color::Black);
-    Level::getInstance().draw(window);
+    states.top()->draw(*this);
     window.display();
 }
 

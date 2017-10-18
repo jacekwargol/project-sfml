@@ -64,6 +64,20 @@ Window.h
 Block.h
 /home/ricen/Programming/C++/ProjectSFML/src/Block.h
 
+/home/ricen/Programming/C++/ProjectSFML/src/MainMenuState.cpp
+SFML/Window/Event.hpp
+-
+MainMenuState.h
+/home/ricen/Programming/C++/ProjectSFML/src/MainMenuState.h
+PlayState.h
+/home/ricen/Programming/C++/ProjectSFML/src/PlayState.h
+TextManager.h
+/home/ricen/Programming/C++/ProjectSFML/src/TextManager.h
+
+/home/ricen/Programming/C++/ProjectSFML/src/MainMenuState.h
+IState.h
+/home/ricen/Programming/C++/ProjectSFML/src/IState.h
+
 /home/ricen/Programming/C++/ProjectSFML/src/PlayState.cpp
 SFML/Window/Event.hpp
 -
@@ -121,4 +135,6 @@ Game.h
 /home/ricen/Programming/C++/ProjectSFML/src/Game.h
 PlayState.h
 /home/ricen/Programming/C++/ProjectSFML/src/PlayState.h
+MainMenuState.h
+/home/ricen/Programming/C++/ProjectSFML/src/MainMenuState.h
 

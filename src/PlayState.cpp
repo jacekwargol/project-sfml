@@ -36,7 +36,5 @@ void PlayState::handleInput(Game& game) {
 }
 
 void PlayState::draw(Game& game) {
-    game.getWindow().clear(sf::Color::Black);
     Level::getInstance().draw(game.getWindow());
-    game.getWindow().display();
 }
