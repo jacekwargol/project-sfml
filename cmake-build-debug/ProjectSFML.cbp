@@ -96,10 +96,25 @@
 		<Unit filename="/home/ricen/Programming/C++/ProjectSFML/src/Game.h">
 			<Option target="ProjectSFML"/>
 		</Unit>
+		<Unit filename="/home/ricen/Programming/C++/ProjectSFML/src/IState.h">
+			<Option target="ProjectSFML"/>
+		</Unit>
 		<Unit filename="/home/ricen/Programming/C++/ProjectSFML/src/Level.cpp">
 			<Option target="ProjectSFML"/>
 		</Unit>
 		<Unit filename="/home/ricen/Programming/C++/ProjectSFML/src/Level.h">
+			<Option target="ProjectSFML"/>
+		</Unit>
+		<Unit filename="/home/ricen/Programming/C++/ProjectSFML/src/PlayState.cpp">
+			<Option target="ProjectSFML"/>
+		</Unit>
+		<Unit filename="/home/ricen/Programming/C++/ProjectSFML/src/PlayState.h">
+			<Option target="ProjectSFML"/>
+		</Unit>
+		<Unit filename="/home/ricen/Programming/C++/ProjectSFML/src/StateManager.cpp">
+			<Option target="ProjectSFML"/>
+		</Unit>
+		<Unit filename="/home/ricen/Programming/C++/ProjectSFML/src/StateManager.h">
 			<Option target="ProjectSFML"/>
 		</Unit>
 		<Unit filename="/home/ricen/Programming/C++/ProjectSFML/src/TextManager.cpp">

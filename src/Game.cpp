@@ -78,3 +78,18 @@ bool Game::handleMovement(Block &block, MoveDir direction) {
     block.move(direction);
     return true;
 }
+
+void Game::changeState(std::shared_ptr<IState> state) {
+    if(!states.empty()) {
+        states.pop();
+    }
+    states.push(state);
+}
+
+void Game::pushState(std::shared_ptr<IState> state) {
+    states.push(state);
+}
+
+void Game::PopState() {
+
+}
