@@ -10,7 +10,7 @@ void PlayState::init() {
     Level::getInstance().load("level1.txt");
 }
 
-void PlayState::handleInput(Game &game) {
+void PlayState::handleInput(Game& game) {
     auto player = Level::getInstance().getPlayer();
     sf::Event event{};
     while (game.getWindow().pollEvent(event)) {
@@ -35,7 +35,7 @@ void PlayState::handleInput(Game &game) {
     }
 }
 
-void PlayState::draw(Game &game) {
+void PlayState::draw(Game& game) {
     game.getWindow().clear(sf::Color::Black);
     Level::getInstance().draw(game.getWindow());
     game.getWindow().display();

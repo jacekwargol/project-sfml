@@ -8,7 +8,6 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/ricen/Programming/C++/ProjectSFML/src/Game.cpp" "/home/ricen/Programming/C++/ProjectSFML/cmake-build-debug/CMakeFiles/ProjectSFML.dir/src/Game.cpp.o"
   "/home/ricen/Programming/C++/ProjectSFML/src/Level.cpp" "/home/ricen/Programming/C++/ProjectSFML/cmake-build-debug/CMakeFiles/ProjectSFML.dir/src/Level.cpp.o"
   "/home/ricen/Programming/C++/ProjectSFML/src/PlayState.cpp" "/home/ricen/Programming/C++/ProjectSFML/cmake-build-debug/CMakeFiles/ProjectSFML.dir/src/PlayState.cpp.o"
-  "/home/ricen/Programming/C++/ProjectSFML/src/StateManager.cpp" "/home/ricen/Programming/C++/ProjectSFML/cmake-build-debug/CMakeFiles/ProjectSFML.dir/src/StateManager.cpp.o"
   "/home/ricen/Programming/C++/ProjectSFML/src/TextManager.cpp" "/home/ricen/Programming/C++/ProjectSFML/cmake-build-debug/CMakeFiles/ProjectSFML.dir/src/TextManager.cpp.o"
   "/home/ricen/Programming/C++/ProjectSFML/src/Tile.cpp" "/home/ricen/Programming/C++/ProjectSFML/cmake-build-debug/CMakeFiles/ProjectSFML.dir/src/Tile.cpp.o"
   "/home/ricen/Programming/C++/ProjectSFML/src/Window.cpp" "/home/ricen/Programming/C++/ProjectSFML/cmake-build-debug/CMakeFiles/ProjectSFML.dir/src/Window.cpp.o"

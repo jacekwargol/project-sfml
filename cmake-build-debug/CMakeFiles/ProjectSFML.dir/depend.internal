@@ -30,9 +30,6 @@ CMakeFiles/ProjectSFML.dir/src/PlayState.cpp.o
  /home/ricen/Programming/C++/ProjectSFML/src/PlayState.h
  /home/ricen/Programming/C++/ProjectSFML/src/Tile.h
  /home/ricen/Programming/C++/ProjectSFML/src/Window.h
-CMakeFiles/ProjectSFML.dir/src/StateManager.cpp.o
- /home/ricen/Programming/C++/ProjectSFML/src/StateManager.cpp
- /home/ricen/Programming/C++/ProjectSFML/src/StateManager.h
 CMakeFiles/ProjectSFML.dir/src/TextManager.cpp.o
  /home/ricen/Programming/C++/ProjectSFML/src/TextManager.cpp
  /home/ricen/Programming/C++/ProjectSFML/src/TextManager.h
@@ -47,6 +44,7 @@ CMakeFiles/ProjectSFML.dir/src/main.cpp.o
  /home/ricen/Programming/C++/ProjectSFML/src/Block.h
  /home/ricen/Programming/C++/ProjectSFML/src/Game.h
  /home/ricen/Programming/C++/ProjectSFML/src/IState.h
+ /home/ricen/Programming/C++/ProjectSFML/src/PlayState.h
  /home/ricen/Programming/C++/ProjectSFML/src/Tile.h
  /home/ricen/Programming/C++/ProjectSFML/src/Window.h
  /home/ricen/Programming/C++/ProjectSFML/src/main.cpp

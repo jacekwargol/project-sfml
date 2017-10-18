@@ -231,33 +231,6 @@ src/PlayState.cpp.s:
 	$(MAKE) -f CMakeFiles/ProjectSFML.dir/build.make CMakeFiles/ProjectSFML.dir/src/PlayState.cpp.s
 .PHONY : src/PlayState.cpp.s
 
-src/StateManager.o: src/StateManager.cpp.o
-
-.PHONY : src/StateManager.o
-
-# target to build an object file
-src/StateManager.cpp.o:
-	$(MAKE) -f CMakeFiles/ProjectSFML.dir/build.make CMakeFiles/ProjectSFML.dir/src/StateManager.cpp.o
-.PHONY : src/StateManager.cpp.o
-
-src/StateManager.i: src/StateManager.cpp.i
-
-.PHONY : src/StateManager.i
-
-# target to preprocess a source file
-src/StateManager.cpp.i:
-	$(MAKE) -f CMakeFiles/ProjectSFML.dir/build.make CMakeFiles/ProjectSFML.dir/src/StateManager.cpp.i
-.PHONY : src/StateManager.cpp.i
-
-src/StateManager.s: src/StateManager.cpp.s
-
-.PHONY : src/StateManager.s
-
-# target to generate assembly for a file
-src/StateManager.cpp.s:
-	$(MAKE) -f CMakeFiles/ProjectSFML.dir/build.make CMakeFiles/ProjectSFML.dir/src/StateManager.cpp.s
-.PHONY : src/StateManager.cpp.s
-
 src/TextManager.o: src/TextManager.cpp.o
 
 .PHONY : src/TextManager.o
@@ -387,9 +360,6 @@ help:
 	@echo "... src/PlayState.o"
 	@echo "... src/PlayState.i"
 	@echo "... src/PlayState.s"
-	@echo "... src/StateManager.o"
-	@echo "... src/StateManager.i"
-	@echo "... src/StateManager.s"
 	@echo "... src/TextManager.o"
 	@echo "... src/TextManager.i"
 	@echo "... src/TextManager.s"

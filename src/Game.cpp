@@ -6,6 +6,7 @@
 #include <SFML/Window/Event.hpp>
 #include "Game.h"
 #include "Level.h"
+#include "IState.h"
 
 Game::Game() : window{}, player{} {}
 
@@ -22,28 +23,7 @@ void Game::gameLoop() {
 }
 
 void Game::handleInput() {
-    auto player = Level::getInstance().getPlayer();
-    sf::Event event{};
-    while (window.pollEvent(event)) {
-        switch (event.type) {
-            case sf::Event::KeyPressed:
-                if (event.key.code == sf::Keyboard::Escape) {
-                    window.close();
-                } else if (event.key.code == sf::Keyboard::W) {
-                    handleMovement(*player, MoveDir::Up);
-                } else if (event.key.code == sf::Keyboard::S) {
-                    handleMovement(*player, MoveDir::Down);
-                } else if (event.key.code == sf::Keyboard::A) {
-                    handleMovement(*player, MoveDir::Left);
-                } else if (event.key.code == sf::Keyboard::D) {
-                    handleMovement(*player, MoveDir::Right);
-                }
-                break;
-
-            default:
-                break;
-        }
-    }
+    states.top()->handleInput(*this);
 }
 
 void Game::handleDrawing() {
@@ -61,7 +41,7 @@ bool Game::handleMovement(Block &block, MoveDir direction) {
     auto newPos = block.getNewPosition(direction);
     auto collidingBlock = Level::getInstance().getCollidingObject(newPos);
     if (collidingBlock) {
-        if(handleMovement(*collidingBlock, direction)) {
+        if (handleMovement(*collidingBlock, direction)) {
             block.move(direction);
             if (Level::getInstance().isWin()) {
                 handleLevelWin();
@@ -80,7 +60,7 @@ bool Game::handleMovement(Block &block, MoveDir direction) {
 }
 
 void Game::changeState(std::shared_ptr<IState> state) {
-    if(!states.empty()) {
+    if (!states.empty()) {
         states.pop();
     }
     states.push(state);
