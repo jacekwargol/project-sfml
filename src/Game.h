@@ -19,7 +19,10 @@ private:
     Block player;
 
     void handleInput();
-    void draw();
+    void handleDrawing();
+
+    bool handleMovement(Block& block, MoveDir direction);
+    void handleLevelWin();
 };
 
 

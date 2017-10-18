@@ -19,13 +19,14 @@ public:
     bool isCollisionWithTile(const sf::Vector2f &pos);
     std::shared_ptr<Block> getCollidingObject(const sf::Vector2f &pos);
     bool isBlockAtCorrectPlate(const Block& block);
+    bool isWin();
 
 private:
     Level();
     ~Level();
 
     std::vector<Tile> map;
-    std::vector<std::shared_ptr<Block>> objects;
+    std::vector<std::shared_ptr<Block>> blocks;
     std::vector<Tile> plates;
 };
 

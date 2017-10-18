@@ -9,11 +9,11 @@ Level &Level::getInstance() {
 }
 
 
-Level::Level() : map{}, objects{}, plates{} {
-    objects.emplace_back(std::make_shared<Block>(
-            Block{TileType::BLOCK, sf::Color::Green, {150, 75}}
+Level::Level() : map{}, blocks{}, plates{} {
+    blocks.emplace_back(std::make_shared<Block>(
+            Block{TileType::Block, sf::Color::Green, {150, 75}}
     ));
-    plates.emplace_back(Tile{TileType::PLATE, sf::Color::Green, true, {300, 75}});
+    plates.emplace_back(Tile{TileType::Plate, sf::Color::Green, true, {300, 75}});
 }
 
 Level::~Level() = default;
@@ -25,7 +25,7 @@ void Level::draw(Window &window) {
     for (auto &plate : plates) {
         plate.draw(window);
     }
-    for (auto &obj : objects) {
+    for (auto &obj : blocks) {
         obj->draw(window);
     }
 }
@@ -56,7 +56,7 @@ void Level::save(const std::string &filename) {
     std::ofstream level(filename);
 
     for (Tile &tile : map) {
-        level << tile.getType() << " ";
+        level << static_cast<int>(tile.getType()) << " ";
         level << static_cast<unsigned>(tile.getColor().r) << " ";
         level << static_cast<unsigned>(tile.getColor().g) << " ";
         level << static_cast<unsigned>(tile.getColor().b) << " ";
@@ -77,11 +77,11 @@ bool Level::isCollisionWithTile(const sf::Vector2f &pos) {
 }
 
 std::shared_ptr<Block> Level::getCollidingObject(const sf::Vector2f &pos) {
-    auto obj = std::find_if(objects.cbegin(), objects.cend(),
+    auto obj = std::find_if(blocks.cbegin(), blocks.cend(),
                             [&](const std::shared_ptr<Block> object) {
                                 return object->getPosition() == pos;
                             });
-    return obj != objects.cend() ? *obj : nullptr;
+    return obj != blocks.cend() ? *obj : nullptr;
 }
 
 bool Level::isBlockAtCorrectPlate(const Block &block) {
@@ -89,4 +89,14 @@ bool Level::isBlockAtCorrectPlate(const Block &block) {
                         [&](const Tile &plate) {
                             return plate.getPosition() == block.getPosition() && plate.getColor() == block.getColor();
                         }) != plates.cend();
+}
+
+bool Level::isWin() {
+    for(auto& block : blocks) {
+        if(!isBlockAtCorrectPlate(*block)) {
+            return false;
+        }
+    }
+
+    return true;
 }

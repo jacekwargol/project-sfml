@@ -13,27 +13,15 @@ void Block::draw(Window &window) {
 }
 
 bool Block::move(MoveDir direction) {
-    sf::Vector2f newPos = getNewPos(direction);
-    auto collidingObject = Level::getInstance().getCollidingObject(newPos);
-    if(collidingObject) {
-        if(collidingObject->move(direction)) {
-            tile.setPosition(newPos);
-            if(Level::getInstance().isBlockAtCorrectPlate(*collidingObject)) {
-                std::cout << "plate at correct positon" << std::endl;
-            }
-            return true;
-        }
-        else{
-            return false;
-        }
-    }
+    sf::Vector2f newPos = getNewPosition(direction);
+
     if(!Level::getInstance().isCollisionWithTile(newPos)) {
         tile.setPosition(newPos);
         return true;
     }
 }
 
-sf::Vector2f Block::getNewPos(MoveDir direction) {
+sf::Vector2f Block::getNewPosition(MoveDir direction) {
     switch (direction) {
         case MoveDir::Up:
             return  {tile.getPosition().x,

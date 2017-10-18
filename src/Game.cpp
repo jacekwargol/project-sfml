@@ -7,7 +7,7 @@
 #include "Game.h"
 #include "Level.h"
 
-Game::Game() : window{}, player{TileType::PLAYER, sf::Color::Blue, {75, 75}} {}
+Game::Game() : window{}, player{TileType::Player, sf::Color::Blue, {75, 75}} {}
 
 Game::~Game() = default;
 
@@ -15,31 +15,26 @@ Game::~Game() = default;
 void Game::gameLoop() {
     Level::getInstance().load("level1.txt");
     while (window.isOpen()) {
-        draw();
+        handleDrawing();
         handleInput();
     }
 }
 
 void Game::handleInput() {
     sf::Event event{};
-    while(window.pollEvent(event)) {
-        switch(event.type) {
+    while (window.pollEvent(event)) {
+        switch (event.type) {
             case sf::Event::KeyPressed:
-                if(event.key.code == sf::Keyboard::Escape) {
+                if (event.key.code == sf::Keyboard::Escape) {
                     window.close();
-                }
-
-                else if(event.key.code == sf::Keyboard::W) {
-                    player.move(MoveDir::Up);
-                }
-                else if(event.key.code == sf::Keyboard::S) {
-                    player.move(MoveDir::Down);
-                }
-                else if(event.key.code == sf::Keyboard::A) {
-                    player.move(MoveDir::Left);
-                }
-                else if(event.key.code == sf::Keyboard::D) {
-                    player.move(MoveDir::Right);
+                } else if (event.key.code == sf::Keyboard::W) {
+                    handleMovement(player, MoveDir::Up);
+                } else if (event.key.code == sf::Keyboard::S) {
+                    handleMovement(player, MoveDir::Down);
+                } else if (event.key.code == sf::Keyboard::A) {
+                    handleMovement(player, MoveDir::Left);
+                } else if (event.key.code == sf::Keyboard::D) {
+                    handleMovement(player, MoveDir::Right);
                 }
                 break;
 
@@ -49,9 +44,36 @@ void Game::handleInput() {
     }
 }
 
-void Game::draw() {
+void Game::handleDrawing() {
     window.clear(sf::Color::Black);
     Level::getInstance().draw(window);
     player.draw(window);
     window.display();
+}
+
+
+void Game::handleLevelWin() {
+    std::cout << "level won" << std::endl;
+}
+
+bool Game::handleMovement(Block &block, MoveDir direction) {
+    auto newPos = block.getNewPosition(direction);
+    auto collidingBlock = Level::getInstance().getCollidingObject(newPos);
+    if (collidingBlock) {
+        if(handleMovement(*collidingBlock, direction)) {
+            block.move(direction);
+            if (Level::getInstance().isWin()) {
+                handleLevelWin();
+            }
+            return true;
+        }
+        return false;
+    }
+
+    if (Level::getInstance().isCollisionWithTile(block.getNewPosition(direction))) {
+        return false;
+    }
+
+    block.move(direction);
+    return true;
 }
