@@ -28,6 +28,8 @@ void Level::draw(Window &window) {
 
 void Level::load(const std::string &filename) {
     map.clear();
+    blocks.clear();
+    plates.clear();
 
     std::ifstream level(filename);
     std::string typeStr, redStr, greenStr, blueStr, alphaStr,
