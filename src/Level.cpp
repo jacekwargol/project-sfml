@@ -9,7 +9,7 @@ Level &Level::getInstance() {
 }
 
 
-Level::Level() : map{}, blocks{}, plates{}, player{} {}
+Level::Level() : map{}, blocks{}, plates{}, player{}, levelNum{1}, maxLevel{2} {}
 
 Level::~Level() = default;
 

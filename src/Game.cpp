@@ -60,7 +60,7 @@ bool Game::handleMovement(Block &block, MoveDir direction) {
 }
 
 void Game::changeState(std::shared_ptr<IState> state) {
-    PopState();
+//    PopState();
     states.push(state);
     states.top()->init();
 }
