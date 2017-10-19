@@ -45,20 +45,22 @@ void Level::load(const std::string &filename) {
         sf::Vector2f pos{std::stof(posxStr) * TILE_SIZE, std::stof(posyStr) * TILE_SIZE};
 
         Tile tile{type, color, isBlocking, pos};
-        if(type == TileType::Plate) {
+        if (type == TileType::Plate) {
             plates.emplace_back(tile);
-        }
-        else if(type == TileType::Block) {
+        } else if (type == TileType::Block) {
             blocks.emplace_back(std::make_shared<Block>(Block{type, color, pos}));
-        }
-        else if(type == TileType::Player) {
+        } else if (type == TileType::Player) {
             player = std::make_shared<Block>(Block{type, color, pos});
-        }
-        else {
+        } else {
             map.emplace_back(Tile{type, color, isBlocking, pos});
         }
     }
 
+}
+
+void Level::load(int levelNum) {
+    auto levelName = "level" + std::to_string(levelNum) + ".txt";
+    load(levelName);
 }
 
 void Level::save(const std::string &filename) {
@@ -101,8 +103,8 @@ bool Level::isBlockAtCorrectPlate(const Block &block) {
 }
 
 bool Level::isWin() {
-    for(auto& block : blocks) {
-        if(!isBlockAtCorrectPlate(*block)) {
+    for (auto &block : blocks) {
+        if (!isBlockAtCorrectPlate(*block)) {
             return false;
         }
     }

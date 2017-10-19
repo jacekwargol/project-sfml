@@ -8,6 +8,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ProjectSFML.dir/src/Window.cpp.o"
   "CMakeFiles/ProjectSFML.dir/src/PlayState.cpp.o"
   "CMakeFiles/ProjectSFML.dir/src/MainMenuState.cpp.o"
+  "CMakeFiles/ProjectSFML.dir/src/LevelWinState.cpp.o"
   "ProjectSFML.pdb"
   "ProjectSFML"
 )

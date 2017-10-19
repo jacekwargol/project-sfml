@@ -105,6 +105,12 @@
 		<Unit filename="/home/ricen/Programming/C++/ProjectSFML/src/Level.h">
 			<Option target="ProjectSFML"/>
 		</Unit>
+		<Unit filename="/home/ricen/Programming/C++/ProjectSFML/src/LevelWinState.cpp">
+			<Option target="ProjectSFML"/>
+		</Unit>
+		<Unit filename="/home/ricen/Programming/C++/ProjectSFML/src/LevelWinState.h">
+			<Option target="ProjectSFML"/>
+		</Unit>
 		<Unit filename="/home/ricen/Programming/C++/ProjectSFML/src/MainMenuState.cpp">
 			<Option target="ProjectSFML"/>
 		</Unit>

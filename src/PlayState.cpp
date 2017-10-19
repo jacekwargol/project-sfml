@@ -2,12 +2,12 @@
 #include "PlayState.h"
 #include "Level.h"
 
-PlayState::PlayState() {}
+PlayState::PlayState() = default;
 
 PlayState::~PlayState() = default;
 
 void PlayState::init() {
-    Level::getInstance().load("level1.txt");
+    Level::getInstance().load(Level::getInstance().getLevelNum());
 }
 
 void PlayState::handleInput(Game& game) {

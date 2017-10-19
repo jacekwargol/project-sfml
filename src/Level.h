@@ -14,8 +14,11 @@ public:
     void draw(Window& window);
 
     void load(const std::string& filename);
+    void load(int levelNum);
     void save(const std::string& filename);
 
+    int getLevelNum() const { return levelNum; }
+    void nextLevel() { if(levelNum < maxLevel) levelNum++; }
     bool isCollisionWithTile(const sf::Vector2f &pos);
     std::shared_ptr<Block> getCollidingObject(const sf::Vector2f &pos);
     bool isBlockAtCorrectPlate(const Block& block);
@@ -31,6 +34,8 @@ private:
     std::vector<std::shared_ptr<Block>> blocks;
     std::vector<Tile> plates;
     std::shared_ptr<Block> player;
+    int levelNum;
+    int maxLevel;
 };
 
 

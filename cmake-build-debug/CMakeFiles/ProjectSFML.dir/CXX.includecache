@@ -29,6 +29,8 @@ Level.h
 /home/ricen/Programming/C++/ProjectSFML/src/Level.h
 IState.h
 /home/ricen/Programming/C++/ProjectSFML/src/IState.h
+LevelWinState.h
+/home/ricen/Programming/C++/ProjectSFML/src/LevelWinState.h
 
 /home/ricen/Programming/C++/ProjectSFML/src/Game.h
 memory
@@ -63,6 +65,20 @@ Window.h
 /home/ricen/Programming/C++/ProjectSFML/src/Window.h
 Block.h
 /home/ricen/Programming/C++/ProjectSFML/src/Block.h
+
+/home/ricen/Programming/C++/ProjectSFML/src/LevelWinState.cpp
+SFML/Window/Event.hpp
+-
+LevelWinState.h
+/home/ricen/Programming/C++/ProjectSFML/src/LevelWinState.h
+PlayState.h
+/home/ricen/Programming/C++/ProjectSFML/src/PlayState.h
+TextManager.h
+/home/ricen/Programming/C++/ProjectSFML/src/TextManager.h
+
+/home/ricen/Programming/C++/ProjectSFML/src/LevelWinState.h
+IState.h
+/home/ricen/Programming/C++/ProjectSFML/src/IState.h
 
 /home/ricen/Programming/C++/ProjectSFML/src/MainMenuState.cpp
 SFML/Window/Event.hpp

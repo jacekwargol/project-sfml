@@ -1,9 +1,15 @@
 #include <SFML/Window/Event.hpp>
-#include "MainMenuState.h"
+#include "LevelWinState.h"
 #include "PlayState.h"
 #include "TextManager.h"
 
-void MainMenuState::handleInput(Game &game) {
+
+LevelWinState::LevelWinState() = default;
+LevelWinState::~LevelWinState() = default;
+
+void LevelWinState::init() {}
+
+void LevelWinState::handleInput(Game &game) {
     sf::Event event{};
     while (game.getWindow().pollEvent(event)) {
         switch (event.type) {
@@ -21,12 +27,7 @@ void MainMenuState::handleInput(Game &game) {
     }
 }
 
-MainMenuState::MainMenuState() = default;
-
-MainMenuState::~MainMenuState() = default;
-
-void MainMenuState::init() {}
-
-void MainMenuState::draw(Game &game) {
-    TextManager::drawAtCenter("Press 'SPACE' to start/nPress 'ESC' to quit", game.getWindow(), 32);
+void LevelWinState::draw(Game &game) {
+    TextManager::drawAtCenter("Level won. Press 'SPACE' to continue.", game.getWindow(), 32);
 }
+

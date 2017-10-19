@@ -12,6 +12,7 @@ CMakeFiles/ProjectSFML.dir/src/Game.cpp.o: ../src/Game.cpp
 CMakeFiles/ProjectSFML.dir/src/Game.cpp.o: ../src/Game.h
 CMakeFiles/ProjectSFML.dir/src/Game.cpp.o: ../src/IState.h
 CMakeFiles/ProjectSFML.dir/src/Game.cpp.o: ../src/Level.h
+CMakeFiles/ProjectSFML.dir/src/Game.cpp.o: ../src/LevelWinState.h
 CMakeFiles/ProjectSFML.dir/src/Game.cpp.o: ../src/Tile.h
 CMakeFiles/ProjectSFML.dir/src/Game.cpp.o: ../src/Window.h
 
@@ -20,6 +21,16 @@ CMakeFiles/ProjectSFML.dir/src/Level.cpp.o: ../src/Level.cpp
 CMakeFiles/ProjectSFML.dir/src/Level.cpp.o: ../src/Level.h
 CMakeFiles/ProjectSFML.dir/src/Level.cpp.o: ../src/Tile.h
 CMakeFiles/ProjectSFML.dir/src/Level.cpp.o: ../src/Window.h
+
+CMakeFiles/ProjectSFML.dir/src/LevelWinState.cpp.o: ../src/Block.h
+CMakeFiles/ProjectSFML.dir/src/LevelWinState.cpp.o: ../src/Game.h
+CMakeFiles/ProjectSFML.dir/src/LevelWinState.cpp.o: ../src/IState.h
+CMakeFiles/ProjectSFML.dir/src/LevelWinState.cpp.o: ../src/LevelWinState.cpp
+CMakeFiles/ProjectSFML.dir/src/LevelWinState.cpp.o: ../src/LevelWinState.h
+CMakeFiles/ProjectSFML.dir/src/LevelWinState.cpp.o: ../src/PlayState.h
+CMakeFiles/ProjectSFML.dir/src/LevelWinState.cpp.o: ../src/TextManager.h
+CMakeFiles/ProjectSFML.dir/src/LevelWinState.cpp.o: ../src/Tile.h
+CMakeFiles/ProjectSFML.dir/src/LevelWinState.cpp.o: ../src/Window.h
 
 CMakeFiles/ProjectSFML.dir/src/MainMenuState.cpp.o: ../src/Block.h
 CMakeFiles/ProjectSFML.dir/src/MainMenuState.cpp.o: ../src/Game.h

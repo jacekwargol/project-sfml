@@ -7,15 +7,14 @@
 #include "Game.h"
 #include "Level.h"
 #include "IState.h"
+#include "LevelWinState.h"
 
-Game::Game() : window{}, player{} {}
+Game::Game() : window{} {}
 
 Game::~Game() = default;
 
 
 void Game::gameLoop() {
-    Level::getInstance().load("level1.txt");
-    player = Level::getInstance().getPlayer();
     while (window.isOpen()) {
         handleDrawing();
         handleInput();
@@ -34,7 +33,8 @@ void Game::handleDrawing() {
 
 
 void Game::handleLevelWin() {
-    std::cout << "level won" << std::endl;
+    Level::getInstance().nextLevel();
+    changeState(std::make_shared<LevelWinState>());
 }
 
 bool Game::handleMovement(Block &block, MoveDir direction) {
@@ -60,16 +60,18 @@ bool Game::handleMovement(Block &block, MoveDir direction) {
 }
 
 void Game::changeState(std::shared_ptr<IState> state) {
-    if (!states.empty()) {
-        states.pop();
-    }
+    PopState();
     states.push(state);
+    states.top()->init();
 }
 
 void Game::pushState(std::shared_ptr<IState> state) {
     states.push(state);
+    states.top()->init();
 }
 
 void Game::PopState() {
-
+    if(!states.empty()) {
+        states.pop();
+    }
 }

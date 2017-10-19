@@ -24,7 +24,7 @@ public:
 
 private:
     Window window;
-    std::shared_ptr<Block> player;
+//    std::shared_ptr<Block> player;
     std::stack<std::shared_ptr<IState>> states;
 
     void handleInput();
