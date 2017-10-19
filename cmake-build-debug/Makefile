@@ -177,6 +177,33 @@ src/Game.cpp.s:
 	$(MAKE) -f CMakeFiles/ProjectSFML.dir/build.make CMakeFiles/ProjectSFML.dir/src/Game.cpp.s
 .PHONY : src/Game.cpp.s
 
+src/GameWinState.o: src/GameWinState.cpp.o
+
+.PHONY : src/GameWinState.o
+
+# target to build an object file
+src/GameWinState.cpp.o:
+	$(MAKE) -f CMakeFiles/ProjectSFML.dir/build.make CMakeFiles/ProjectSFML.dir/src/GameWinState.cpp.o
+.PHONY : src/GameWinState.cpp.o
+
+src/GameWinState.i: src/GameWinState.cpp.i
+
+.PHONY : src/GameWinState.i
+
+# target to preprocess a source file
+src/GameWinState.cpp.i:
+	$(MAKE) -f CMakeFiles/ProjectSFML.dir/build.make CMakeFiles/ProjectSFML.dir/src/GameWinState.cpp.i
+.PHONY : src/GameWinState.cpp.i
+
+src/GameWinState.s: src/GameWinState.cpp.s
+
+.PHONY : src/GameWinState.s
+
+# target to generate assembly for a file
+src/GameWinState.cpp.s:
+	$(MAKE) -f CMakeFiles/ProjectSFML.dir/build.make CMakeFiles/ProjectSFML.dir/src/GameWinState.cpp.s
+.PHONY : src/GameWinState.cpp.s
+
 src/Level.o: src/Level.cpp.o
 
 .PHONY : src/Level.o
@@ -408,6 +435,9 @@ help:
 	@echo "... src/Game.o"
 	@echo "... src/Game.i"
 	@echo "... src/Game.s"
+	@echo "... src/GameWinState.o"
+	@echo "... src/GameWinState.i"
+	@echo "... src/GameWinState.s"
 	@echo "... src/Level.o"
 	@echo "... src/Level.i"
 	@echo "... src/Level.s"

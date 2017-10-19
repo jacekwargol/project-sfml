@@ -7,7 +7,7 @@
 #include "Window.h"
 
 enum class TileType {Floor, Wall, Plate, Player, Block };
-const int TILE_SIZE = 75;
+const int TILE_SIZE = 60;
 
 class Tile {
 public:

@@ -8,6 +8,7 @@
 #include "Level.h"
 #include "IState.h"
 #include "LevelWinState.h"
+#include "GameWinState.h"
 
 Game::Game() : window{} {}
 
@@ -33,8 +34,13 @@ void Game::handleDrawing() {
 
 
 void Game::handleLevelWin() {
-    Level::getInstance().nextLevel();
-    changeState(std::make_shared<LevelWinState>());
+    if(Level::getInstance().getLevelNum() == Level::getInstance().getMaxLevelNum()) {
+        changeState(std::make_shared<GameWinState>());
+    }
+    else {
+        Level::getInstance().nextLevel();
+        changeState(std::make_shared<LevelWinState>());
+    }
 }
 
 bool Game::handleMovement(Block &block, MoveDir direction) {
@@ -60,7 +66,7 @@ bool Game::handleMovement(Block &block, MoveDir direction) {
 }
 
 void Game::changeState(std::shared_ptr<IState> state) {
-//    PopState();
+    PopState();
     states.push(state);
     states.top()->init();
 }

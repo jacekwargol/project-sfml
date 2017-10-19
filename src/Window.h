@@ -7,7 +7,7 @@
 
 class Window : public sf::RenderWindow {
 public:
-    explicit Window(const std::string& title = "Project SFML", const sf::Vector2u& size = {800, 600});
+    explicit Window(const std::string& title = "Project SFML", const sf::Vector2u& size = {1024, 768});
     ~Window() override;
 };
 

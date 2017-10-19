@@ -96,6 +96,12 @@
 		<Unit filename="/home/ricen/Programming/C++/ProjectSFML/src/Game.h">
 			<Option target="ProjectSFML"/>
 		</Unit>
+		<Unit filename="/home/ricen/Programming/C++/ProjectSFML/src/GameWinState.cpp">
+			<Option target="ProjectSFML"/>
+		</Unit>
+		<Unit filename="/home/ricen/Programming/C++/ProjectSFML/src/GameWinState.h">
+			<Option target="ProjectSFML"/>
+		</Unit>
 		<Unit filename="/home/ricen/Programming/C++/ProjectSFML/src/IState.h">
 			<Option target="ProjectSFML"/>
 		</Unit>

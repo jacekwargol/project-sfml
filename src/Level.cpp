@@ -113,3 +113,7 @@ bool Level::isWin() {
 
     return true;
 }
+
+void Level::reset() {
+    levelNum = 1;
+}

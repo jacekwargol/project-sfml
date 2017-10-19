@@ -17,7 +17,10 @@ public:
     void load(int levelNum);
     void save(const std::string& filename);
 
+    void reset();
+
     int getLevelNum() const { return levelNum; }
+    int getMaxLevelNum() const { return maxLevel; }
     void nextLevel() { if(levelNum < maxLevel) levelNum++; }
     bool isCollisionWithTile(const sf::Vector2f &pos);
     std::shared_ptr<Block> getCollidingObject(const sf::Vector2f &pos);
